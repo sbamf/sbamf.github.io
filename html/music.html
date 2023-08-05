@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>SBAMF</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../images/SBAMF v3 (Final Edit PNG).png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="music.html">music</a></li>
+                    <li><a href="love.html">love</a></li>
+                    <li><a href="gallery.html">gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header-bar"></div>
+    </header>
+
+    <div class="home-page">
+        <div class="spotify">
+            <h2>spotify</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3mo2UQaw2fBaolL3tyqIwp?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="my-music">
+            <h2>top tier music</h2>
+            <audio controls>
+                <source src="../audio/itll be ok remix.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+            <audio controls>
+                <source src="../audio/Lauv Feelings Remix.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="recommender">
+            <h2>recommender</h2>
+
+            <form id="recommendationsForm">
+                <label for="trackName">track name:</label>
+                <input type="text" id="trackName" required>
+                <br>
+                <label for="artist">artist:</label>
+                <input type="text" id="artist" required>
+                <br>
+                <label for="popularity">popularity (0-100):</label>
+                <input type="number" id="popularity" step="1" min="0" max="100" value="50">
+                <br>
+                <label for="energy">energy (0-1):</label>
+                <input type="number" id="energy" step="0.01" min="0" max="1" value="0.5">
+                <br>
+                <label for="acousticness">acousticness (0-1):</label>
+                <input type="number" id="acousticness" step=".01" min="0" max="1" value=".5">
+                <br>
+                <button type="submit">Get Recommendations</button>
+            </form>
+
+            <div class="resultsbox" id="resultsSection" style="display: none;">
+                <div id="recommendations"></div>
+                <p class="results" id="recommendation"></p>
+                <button class="backbutton" id="backButton">Back</button>
+            </div>
+
+            <script type='text/javascript' src='../config.js'></script>
+            <script src="../js/recommender.js"></script>
+        </div>
+    </div>
+
+</body>
+
+</html>
